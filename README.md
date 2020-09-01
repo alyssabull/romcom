@@ -2,7 +2,7 @@
 The RomCom Cover Machine can create and save romance novel covers that generates both randomly made and user made covers.
 ## Prerequisites
 * A text editing program
-*Access to site: [Me!](https://alyssabull.github.io/romcom/)
+* Access to site: [Me!](https://alyssabull.github.io/romcom/)
 * Access to GitHub Repository [RomCom](https://github.com/alyssabull/romcom)
 * A sense of humor
 
