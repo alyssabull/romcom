@@ -40,10 +40,10 @@ function getRandomIndex(array) {
 };
 
 function displayCover(leCover) {
-  newCoverImg.src = leCover.cover;
-  newTitle.innerText = leCover.title;
-  newDescriptor1.innerText = leCover.tagline1;
-  newDescriptor2.innerText = leCover.tagline2;
+  document.querySelector('.cover-image').src = leCover.cover;
+  document.querySelector('.cover-title').innerText = leCover.title;
+  document.querySelector('.tagline-1').innerText = leCover.tagline1;
+  document.querySelector('.tagline-2').innerText = leCover.tagline2;
 };
 
 function generateRandomCover(){
