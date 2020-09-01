@@ -1,9 +1,3 @@
-
-var newCoverImg = document.querySelector('.cover-image');
-var newTitle = document.querySelector('.cover-title');
-var newDescriptor1 = document.querySelector('.tagline-1');
-var newDescriptor2 = document.querySelector('.tagline-2');
-
 var randomCoverButton = document.querySelector('.random-cover-button');
 var makeNewButton = document.querySelector('.make-new-button');
 var homeButton = document.querySelector('.home-button');
@@ -15,11 +9,6 @@ var formPage = document.querySelector('.form-view');
 var homeView = document.querySelector('.home-view');
 var savedCoversView = document.querySelector('.saved-view');
 var savedCoversSection = document.querySelector('.saved-covers-section');
-
-var coverForm = document.querySelector('#cover');
-var titleForm = document.querySelector('#title');
-var descriptor1Form = document.querySelector('#descriptor1');
-var descriptor2Form = document.querySelector('#descriptor2');
 
 var defaultCover = document.querySelector(".main-cover")
 var savedCovers = [];
@@ -99,10 +88,10 @@ function goHome() {
 };
 
 function addToFormArrays() {
-  covers.unshift(coverForm.value);
-  titles.unshift(titleForm.value);
-  descriptors.unshift(descriptor1Form.value);
-  descriptors.unshift(descriptor2Form.value);
+  covers.unshift(document.querySelector('#cover').value);
+  titles.unshift(document.querySelector('#title').value);
+  descriptors.unshift(document.querySelector('#descriptor1').value);
+  descriptors.unshift(document.querySelector('#descriptor2').value);
 };
 
 function makeBook() {
