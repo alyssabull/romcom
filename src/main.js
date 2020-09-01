@@ -10,7 +10,6 @@ var homeView = document.querySelector('.home-view');
 var savedCoversView = document.querySelector('.saved-view');
 var savedCoversSection = document.querySelector('.saved-covers-section');
 
-var defaultCover = document.querySelector(".main-cover")
 var savedCovers = [];
 var currentCover;
 
