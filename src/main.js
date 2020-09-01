@@ -1,4 +1,4 @@
-// Create variables targetting the relevant DOM (document object model) elements here 👇
+
 var newCoverImg = document.querySelector('.cover-image');
 var newTitle = document.querySelector('.cover-title');
 var newDescriptor1 = document.querySelector('.tagline-1');
@@ -22,12 +22,10 @@ var descriptor1Form = document.querySelector('#descriptor1');
 var descriptor2Form = document.querySelector('#descriptor2');
 
 var defaultCover = document.querySelector(".main-cover")
-var savedCovers = [
-  new Cover("http://3.bp.blogspot.com/-iE4p9grvfpQ/VSfZT0vH2UI/AAAAAAAANq8/wwQZssi-V5g/s1600/Do%2BNot%2BForsake%2BMe%2B-%2BImage.jpg", "Sunsets and Sorrows", "sunsets", "sorrows")
-];
+var savedCovers = [];
 var currentCover;
 
-// Add your event listeners here 👇
+
 window.addEventListener('load', generateRandomCover);
 randomCoverButton.addEventListener('click', generateRandomCover);
 makeNewButton.addEventListener('click', viewForm);
@@ -36,7 +34,7 @@ homeButton.addEventListener('click', goHome);
 makeMyBookButton.addEventListener('click', makeBook);
 saveCoverButton.addEventListener('click', saveCover);
 
-// Create your event handlers and other functions here 👇
+
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
 };
@@ -76,21 +74,19 @@ function viewSavedCovers() {
   formPage.classList.add('hidden');
 
 var miniCovers = ""
-for (var i = 0; i < savedCovers.length; i++) {
-var newSavedCover =
-  `<section class="mini-cover">
-    <img class="mini-cover" src=${savedCovers[i].cover}>
-    <h2 class="cover-title">${savedCovers[i].title}</h2>
-    <h3 class="tagline">A tale of <span class="tagline-1">${savedCovers[i].tagline1}</span> and <span class="tagline-2">${savedCovers[i].tagline2}</span></h3>
-    <img class="price-tag" src="./assets/price.png">
-    <img class="overlay" src="./assets/overlay.png">
-  </section>`
+  for (var i = 0; i < savedCovers.length; i++) {
+    var newSavedCover =
+      `<section class="mini-cover">
+        <img class="mini-cover" src=${savedCovers[i].cover}>
+        <h2 class="cover-title">${savedCovers[i].title}</h2>
+        <h3 class="tagline">A tale of <span class="tagline-1">${savedCovers[i].tagline1}</span> and <span class="tagline-2">${savedCovers[i].tagline2}</span></h3>
+        <img class="price-tag" src="./assets/price.png">
+        <img class="overlay" src="./assets/overlay.png">
+      </section>`
 
   miniCovers += newSavedCover;
 }
-
 savedCoversSection.innerHTML = miniCovers;
-
 };
 
 function goHome() {
