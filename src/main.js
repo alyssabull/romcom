@@ -64,6 +64,7 @@ function viewForm() {
   homeView.classList.add('hidden');
   randomCoverButton.classList.add('hidden');
   saveCoverButton.classList.add('hidden');
+  savedCoversView.classList.add('hidden');
 };
 
 function viewSavedCovers() {
