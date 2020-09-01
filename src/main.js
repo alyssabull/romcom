@@ -61,6 +61,8 @@ function viewSavedCovers() {
   saveCoverButton.classList.add('hidden');
   formPage.classList.add('hidden');
 
+
+
 var miniCovers = ""
   for (var i = 0; i < savedCovers.length; i++) {
     var newSavedCover =
@@ -107,3 +109,14 @@ function saveCover() {
     savedCovers.unshift(currentCover);
   }
 };
+
+var miniCoverList = document.querySelectorAll(".mini-cover")
+
+miniCoverList.addEventListener('dblclick', deleteCover)
+
+function deleteCover() {
+  for (var i = 0; i < miniCoverList.length) {
+    
+  }
+  }
+}
