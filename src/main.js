@@ -11,7 +11,7 @@ var savedCoversView = document.querySelector('.saved-view');
 var savedCoversSection = document.querySelector('.saved-covers-section');
 
 var savedCovers = [];
-var currentCover;
+var currentCover;4
 
 
 window.addEventListener('load', generateRandomCover);
