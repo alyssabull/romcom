@@ -111,10 +111,11 @@ function saveCover() {
 
 
 function deleteCover() {
-  var miniCovers = event.target.id;
+  var smallCover = event.target.id;
   for (var i = 0; i < savedCovers.length; i++) {
-    if ( miniCovers === `${savedCovers[i].id}`) {
+    if (smallCover === `${savedCovers[i].id}`) {
       savedCovers.splice(i, 1)
-    };
+    }
   }
+  viewSavedCovers();
 }
