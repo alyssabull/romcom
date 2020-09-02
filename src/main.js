@@ -21,7 +21,7 @@ viewSavedButton.addEventListener('click', viewSavedCovers);
 homeButton.addEventListener('click', goHome);
 makeMyBookButton.addEventListener('click', makeBook);
 saveCoverButton.addEventListener('click', saveCover);
-
+savedCoversSection.addEventListener('dblclick', deleteCover)
 
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
@@ -61,17 +61,15 @@ function viewSavedCovers() {
   saveCoverButton.classList.add('hidden');
   formPage.classList.add('hidden');
 
-
-
 var miniCovers = ""
   for (var i = 0; i < savedCovers.length; i++) {
     var newSavedCover =
       `<section class="mini-cover">
-        <img class="mini-cover" src=${savedCovers[i].cover}>
-        <h2 class="cover-title">${savedCovers[i].title}</h2>
-        <h3 class="tagline">A tale of <span class="tagline-1">${savedCovers[i].tagline1}</span> and <span class="tagline-2">${savedCovers[i].tagline2}</span></h3>
-        <img class="price-tag" src="./assets/price.png">
-        <img class="overlay" src="./assets/overlay.png">
+        <img class="mini-cover" id="${savedCovers[i].id}"  src=${savedCovers[i].cover}>
+        <h2 class="cover-title" id="${savedCovers[i].id}">${savedCovers[i].title}</h2>
+        <h3 class="tagline" id="${savedCovers[i].id}">A tale of <span class="tagline-1" id="${savedCovers[i].id}">${savedCovers[i].tagline1}</span> and <span class="tagline-2" id="${savedCovers[i].id}">${savedCovers[i].tagline2}</span></h3>
+        <img class="price-tag" id="${savedCovers[i].id} "src="./assets/price.png">
+        <img class="overlay" id="${savedCovers[i].id}"src="./assets/overlay.png">
       </section>`
 
   miniCovers += newSavedCover;
@@ -110,13 +108,13 @@ function saveCover() {
   }
 };
 
-var miniCoverList = document.querySelectorAll(".mini-cover")
 
-miniCoverList.addEventListener('dblclick', deleteCover)
 
 function deleteCover() {
-  for (var i = 0; i < miniCoverList.length) {
-    
-  }
+  var miniCovers = event.target.id;
+  for (var i = 0; i < savedCovers.length; i++) {
+    if ( miniCovers === `${savedCovers[i].id}`) {
+      savedCovers.splice(i, 1)
+    };
   }
 }
