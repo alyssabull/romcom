@@ -119,3 +119,4 @@ function deleteCover() {
   }
   viewSavedCovers();
 }
+//comment to make atom save again
